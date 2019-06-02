@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <script src="http://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>내가 만든 링크</h1>
+        <a href="{%url 'self'%}">self페이지 가보기</a>
+        <br>
+        <h1>여기서 글자를 세봅니다~ wordcount GO GO</h1>
+        <!--홈은 3가지의 기능이 있어야한다. 첫번째 사용자의 입력을 받을 수 있는 공간,
+     어바웃 페이지와 링크로 연결, 세번째는 제출버튼 있어야함-->
+        <a href="{%url 'about'%}">ABOUT</a>
+
+        <!--사용자의 입력을 받는 공간 폼태그, 폼 입력받은걸을 어디로 제출하느냐가 액션부분에드가야함-->
+        <form action="{%url 'result'%}">
+            <textarea cols="40" rows="10" name="fulltext"></textarea>
+            <br>
+            <!--다음은 제출버튼 바튼이름은 세라!-->
+            <!---->
+            <input type="submit" class="btn btn-success"></button>
+        </form>
+        <br> 
+    </div>
+</body>
+
+</html>
